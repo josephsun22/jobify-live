@@ -25,8 +25,8 @@ const Login = () => {
       <Form method='post' className='form'>
         <Logo />
         <h4>login</h4>
-        <FormRow type='email' name='email' defaultValue='john@gmail.com' />
-        <FormRow type='password' name='password' defaultValue='secret123' />
+        <FormRow type='email' name='email' defaultValue='joey@gmail.com' />
+        <FormRow type='password' name='password' defaultValue='joey1998' />
         <button type='submit' className='btn btn-block' disabled={isSubmitting}>
           {isSubmitting ? 'submitting...' : 'submit'}
         </button>
