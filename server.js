@@ -35,18 +35,9 @@ app.get('/', (req, res) => {
   res.send('Hello World');
 });
 
-app.post('/', (req, res) => {
-  console.log(req);
-
-  res.json({ message: 'Data received', data: req.body });
-});
-
 app.get('/api/v1/test', (req, res) => {
   res.json({ msg: 'test route' });
 });
-
-app.use(express.static(path.resolve(__dirname, '/public')));
-
 
 app.use('/api/v1/jobs', authenticateUser, jobRouter);
 app.use('/api/v1/auth', authRouter);
