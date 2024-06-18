@@ -20,13 +20,14 @@ export const action = async ({ request }) => {
 const Login = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === 'submitting';
+
   return (
     <Wrapper>
       <Form method='post' className='form'>
         <Logo />
         <h4>login</h4>
-        <FormRow type='email' name='email' defaultValue='joey@gmail.com' />
-        <FormRow type='password' name='password' defaultValue='joey1998' />
+        <FormRow type='email' name='email' defaultValue="" />
+        <FormRow type='password' name='password' defaultValue="" />
         <button type='submit' className='btn btn-block' disabled={isSubmitting}>
           {isSubmitting ? 'submitting...' : 'submit'}
         </button>
